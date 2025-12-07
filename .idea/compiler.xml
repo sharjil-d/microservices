@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo" />
       </profile>
-      <profile name="Annotation profile for loans" enabled="true">
+      <profile name="Annotation profile for cards" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -17,11 +17,13 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
         <module name="loans" />
+        <module name="cards" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cards" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="loans" options="-parameters" />
     </option>
